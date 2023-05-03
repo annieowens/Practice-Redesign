@@ -5,12 +5,13 @@
 #recipe{
 
     #recipe-bottom{
-        display: grid;
-        @include md{
-            
-            grid-template-columns: 40% auto;
-        }
+       
         section{
+
+            @include md{
+                display: grid;
+                grid-template-columns: 40% auto;
+            }
             display: grid;
             grid-template-columns: 16px auto 16px;
             grid-template-areas: ". recipe .";
