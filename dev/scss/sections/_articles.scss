@@ -1,0 +1,23 @@
+/* =============
+    articles
+============= */
+#articles{
+
+    section{
+        
+        img{
+            width: 100%;
+        }
+    }
+
+    #card{
+        display: grid;
+        grid-template-columns: 16px auto 16px;
+        grid-template-areas: ". card .";
+        background-color: rgb(129, 194, 194);
+    
+        >div{
+            grid-area: card;
+        }
+    }
+       }
