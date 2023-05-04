@@ -8,7 +8,14 @@
 
 .show-large{
     display: none;
-    @include lg{
+    @mixin lg{
+        display: block;
+    }
+}
+
+.show-extra-large{
+    display: none;
+    @mixin  lg{
         display: block;
     }
 }

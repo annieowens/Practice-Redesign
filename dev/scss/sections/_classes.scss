@@ -3,6 +3,25 @@
 ============= */
 
 #classes{
+@include md{
+    display: grid;
+    grid-template-columns: 16px auto 16px;
+    grid-template-areas: ". classes-card .";
+    background-color: rgb(226, 175, 5);
+
+    @include xxl{
+        grid-template-columns: auto 1200px auto;
+    }
+}
+   >div{
+    display: grid;
+    gap: 16px;
+    
+    @include md{
+        grid-area: classes-cards;
+        grid-template-columns: 50% auto;
+    }
+   }
     aside{
         display: grid;
         grid-template-columns: 16px auto 16px;
