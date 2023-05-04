@@ -403,19 +403,16 @@ header #searchbar > div {
 /* =============
     recipe
 ============= */
-#recipe #recipe-bottom {
-  display: grid;
-}
-@media (min-width: 768px) {
-  #recipe #recipe-bottom {
-    grid-template-columns: 40% auto;
-  }
-}
 #recipe #recipe-bottom section {
   display: grid;
   grid-template-columns: 16px auto 16px;
   grid-template-areas: ". recipe .";
   background-color: rgb(51, 138, 201);
+}
+@media (min-width: 768px) {
+  #recipe #recipe-bottom section {
+    grid-template-columns: 40% auto;
+  }
 }
 #recipe #recipe-bottom section > div {
   grid-area: recipe;
