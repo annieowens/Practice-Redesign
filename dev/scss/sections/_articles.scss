@@ -3,6 +3,17 @@
 ============= */
 #articles{
 
+div{
+@include md{
+    display: grid;
+    grid-template-columns: 16px auto 16px;
+    grid-template-areas: ". articles .";
+}
+
+@include xxl{
+    grid-template-columns: auto 1200px auto;
+   
+}
     section{
         
         img{
@@ -20,4 +31,5 @@
             grid-area: card;
         }
     }
-       }
+}
+    }
