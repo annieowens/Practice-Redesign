@@ -427,11 +427,16 @@ header #searchbar > div {
 }
 @media (min-width: 1440px) {
   #recipe #recipe-bottom {
-    grid-template-columns: 16px auto 16px;
+    grid-template-columns: 20% auto 16px;
   }
 }
 #recipe #recipe-bottom #recipe-bottom-right {
   background-color: purple;
+}
+@media (min-width: 1440px) {
+  #recipe #recipe-bottom {
+    grid-template-columns: 16px auto 20%;
+  }
 }
 
 /* =============
