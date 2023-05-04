@@ -1,4 +1,12 @@
 /* =============
+    Variables
+============= */
+:root {
+  --black: #000000;
+  --white: #ffffff;
+}
+
+/* =============
     Mixins
 ============= */
 /* ---------------- Font Sizing ---------------- */
@@ -7,14 +15,6 @@ html {
 }
 
 /* ---------------- Media Queries ---------------- */
-/* =============
-    Variables
-============= */
-:root {
-  --black: #000000;
-  --white: #ffffff;
-}
-
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -327,12 +327,30 @@ template {
 /* =============
     Base
 ============= */
+ul {
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  list-style: none;
+}
+
 .show-large {
   display: none;
+}
+@media (min-width: 1024px) {
+  .show-large {
+    display: block;
+  }
 }
 
 .show-extra-large {
   display: none;
+}
+@media (min-width: 1024px) {
+  .show-extra-large {
+    display: block;
+  }
 }
 
 .large-images {
@@ -451,35 +469,35 @@ header #searchbar > div {
     classes
 ============= */
 @media (min-width: 768px) {
-  #classes {
+  #classesTest {
     display: grid;
     grid-template-columns: 16px auto 16px;
-    grid-template-areas: ". classes-card .";
-    background-color: rgb(226, 175, 5);
+    grid-template-areas: ". classes-cards .";
   }
 }
-@media (min-width: 768px) and (min-width: 1440px) {
-  #classes {
+@media (min-width: 1440px) {
+  #classesTest {
     grid-template-columns: auto 1200px auto;
   }
 }
-#classes > div {
+#classesTest > div {
   display: grid;
   gap: 16px;
+  border: 1px solid red;
 }
 @media (min-width: 768px) {
-  #classes > div {
+  #classesTest > div {
     grid-area: classes-cards;
     grid-template-columns: 50% auto;
   }
 }
-#classes aside {
+#classesTest > div > aside {
   display: grid;
   grid-template-columns: 16px auto 16px;
   grid-template-areas: ". classes .";
   background-color: rgb(51, 193, 201);
 }
-#classes aside > div {
+#classesTest > div > aside > div {
   grid-area: classes;
   display: grid;
   grid-template-columns: 70% auto;
@@ -488,18 +506,53 @@ header #searchbar > div {
 /* =============
     gallery
 ============= */
+@media (min-width: 1024px) {
+  #gallery {
+    display: grid;
+    grid-template-columns: 16px auto 16px;
+    grid-template-areas: ". gallery .";
+  }
+}
+@media (min-width: 1024px) {
+  #gallery ul {
+    grid-area: gallery;
+  }
+}
+#gallery ul li img {
+  width: 100%;
+}
+
 /* =============
     articles
 ============= */
-#articles section img {
+@media (min-width: 768px) {
+  #articles {
+    display: grid;
+    grid-template-columns: 16px auto 16px;
+    grid-template-areas: ". articles .";
+  }
+}
+@media (min-width: 1440px) {
+  #articles {
+    grid-template-columns: auto 1200px auto;
+  }
+}
+@media (min-width: 768px) {
+  #articles > div {
+    grid-area: artciles;
+    display: grid;
+    grid-template-columns: 50% auto;
+  }
+}
+#articles > div section img {
   width: 100%;
 }
-#articles #card {
+#articles > div .card {
   display: grid;
   grid-template-columns: 16px auto 16px;
   grid-template-areas: ". card .";
-  background-color: rgb(129, 194, 194);
+  background-color: rgb(9, 160, 160);
 }
-#articles #card > div {
+#articles > div .card > div {
   grid-area: card;
 }

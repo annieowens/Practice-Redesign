@@ -6,16 +6,24 @@
 //     width: 100%;
 // }
 
+ul {
+    margin: 0;
+    padding: 0;
+    li{
+        list-style: none;
+    }
+}
+
 .show-large{
     display: none;
-    @mixin lg{
+    @include lg{
         display: block;
     }
 }
 
 .show-extra-large{
     display: none;
-    @mixin  lg{
+    @include  lg{
         display: block;
     }
 }

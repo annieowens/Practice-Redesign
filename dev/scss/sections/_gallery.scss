@@ -2,60 +2,70 @@
     gallery
 ============= */
 
-#gallery{
-    
-    @mixin lg{
+#gallery {
+
+    @include lg {
         display: grid;
         grid-template-columns: 16px auto 16px;
-        grid-template-areas: gallery;
+        grid-template-areas: ". gallery .";
     }
 
+    ul{
 
-       ul{
-        @include md{
+        @include lg{
             grid-area: gallery;
-            grid-template-areas: 50% auto;
         }
-    
 
+        li{
 
-        @include lg{
-            grid-template-columns: 60% auto;
-
+            img{
+                width: 100%;
+            }
         }
-    
+    }
+   
+    // @include lg {
+    //     display: grid;
+    //     grid-template-columns: 16px auto 16px;
+    //     grid-template-areas: ". gallery .";
+    // }
 
-        @include lg{
-            grid-template-columns: 60% auto;
 
-        }
-        @include xxl{
-            grid-template-areas: 
-            "g1 g2"
-            "g1 g3";
-           }
-    
-           #g1{
-            @include xxl{
-                grid-area: g1;
-            }
-           }
-    
-           #g2{
-            @include xxl{
-                grid-area: g2;
-            }
-           }
-    
-           #g3{
-            @include xxl{
-                grid-area: g3;
-            }
-           }
-       }
+    // ul {
+    //     // @include md {
+            
+    //     //     grid-template-areas: 50% auto;
+    //     // }
 
-      
+    //     @include lg {
+    //         grid-area: gallery;
+    //         display: grid;
+    //         grid-template-columns: 60% auto;
 
+    //     }
+
+    //     @include xxl {
+    //         grid-template-areas:
+    //             "g1 g2"
+    //             "g1 g3";
+    //     }
+
+    //     #g1 {
+    //         @include xxl {
+    //             grid-area: g1;
+    //         }
+    //     }
+
+    //     #g2 {
+    //         @include xxl {
+    //             grid-area: g2;
+    //         }
+    //     }
+
+    //     #g3 {
+    //         @include xxl {
+    //             grid-area: g3;
+    //         }
+    //     }
+    // }
 }
-
-
