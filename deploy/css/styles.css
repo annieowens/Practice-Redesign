@@ -443,7 +443,7 @@ header #searchbar > div {
 #recipe #recipe-bottom section {
   display: grid;
   grid-template-areas: ". recipe .";
-  background-color: rgb(51, 138, 201);
+  background-color: rgb(151, 163, 22);
 }
 #recipe #recipe-bottom section > div {
   grid-area: recipe;
