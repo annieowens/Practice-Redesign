@@ -403,22 +403,32 @@ header #searchbar > div {
 /* =============
     recipe
 ============= */
-#recipe #recipe-bottom section {
-  display: grid;
-  grid-template-columns: 16px auto 16px;
-  grid-template-areas: ". recipe .";
-  background-color: rgb(51, 138, 201);
-}
 @media (min-width: 768px) {
-  #recipe #recipe-bottom section {
+  #recipe #recipe-bottom {
+    display: grid;
     grid-template-columns: 40% auto;
   }
+}
+@media (min-width: 1024px) {
+  #recipe #recipe-bottom {
+    grid-template-columns: 50% auto;
+  }
+}
+#recipe #recipe-bottom section {
+  display: grid;
+  grid-template-areas: ". recipe .";
+  background-color: rgb(51, 138, 201);
 }
 #recipe #recipe-bottom section > div {
   grid-area: recipe;
 }
 #recipe #recipe-bottom #recipe-bottom-left {
   background-color: orange;
+}
+@media (min-width: 1440px) {
+  #recipe #recipe-bottom {
+    grid-template-columns: 16px auto 16px;
+  }
 }
 #recipe #recipe-bottom #recipe-bottom-right {
   background-color: purple;
