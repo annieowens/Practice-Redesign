@@ -521,6 +521,31 @@ header #searchbar > div {
 #gallery ul li img {
   width: 100%;
 }
+@media (min-width: 768px) {
+  #gallery ul li {
+    grid-template-areas: 50% auto;
+  }
+}
+@media (min-width: 1440px) {
+  #gallery ul li {
+    grid-template-areas: "g1 g2" "g1 g3";
+  }
+}
+@media (min-width: 1440px) {
+  #gallery ul li #g1 {
+    grid-area: g1;
+  }
+}
+@media (min-width: 1440px) {
+  #gallery ul li #g2 {
+    grid-area: g2;
+  }
+}
+@media (min-width: 1440px) {
+  #gallery ul li #g3 {
+    grid-area: g3;
+  }
+}
 
 /* =============
     articles
@@ -537,11 +562,22 @@ header #searchbar > div {
     grid-template-columns: auto 1200px auto;
   }
 }
+#articles > div {
+  display: grid;
+  gap: 16px;
+}
 @media (min-width: 768px) {
   #articles > div {
-    grid-area: artciles;
-    display: grid;
-    grid-template-columns: 50% auto;
+    grid-area: articles;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: " n1 n1 n2 n2" "n3 n3 n4 n4" "..n5 n5 ..";
+  }
+}
+@media (min-width: 1024px) {
+  #articles > div {
+    grid-area: articles;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas: " n1 n1 n2 n2 n3 n3 " ".. n4 n4 n5 n5 ..";
   }
 }
 #articles > div section img {
@@ -555,4 +591,29 @@ header #searchbar > div {
 }
 #articles > div .card > div {
   grid-area: card;
+}
+@media (min-width: 768px) {
+  #articles #n1 {
+    grid-area: n1;
+  }
+}
+@media (min-width: 768px) {
+  #articles #n2 {
+    grid-area: n2;
+  }
+}
+@media (min-width: 768px) {
+  #articles #n3 {
+    grid-area: n3;
+  }
+}
+@media (min-width: 768px) {
+  #articles #n4 {
+    grid-area: n4;
+  }
+}
+@media (min-width: 768px) {
+  #articles #n5 {
+    grid-area: n5;
+  }
 }

@@ -1,7 +1,6 @@
 /* =============
     gallery
 ============= */
-
 #gallery {
 
     @include lg {
@@ -10,20 +9,47 @@
         grid-template-areas: ". gallery .";
     }
 
-    ul{
+    ul {
 
-        @include lg{
+        @include lg {
             grid-area: gallery;
         }
 
-        li{
+        li {
 
-            img{
+            img {
                 width: 100%;
+            }
+
+            @include md {
+                grid-template-areas: 50% auto;
+            }
+
+            @include xxl {
+                grid-template-areas:
+                    "g1 g2"
+                    "g1 g3";
+            }
+
+            #g1 {
+                @include xxl {
+                    grid-area: g1;
+                }
+            }
+
+            #g2 {
+                @include xxl {
+                    grid-area: g2;
+                }
+            }
+
+            #g3 {
+                @include xxl {
+                    grid-area: g3;
+                }
             }
         }
     }
-   
     // @include lg {
     //     display: grid;
     //     grid-template-columns: 16px auto 16px;

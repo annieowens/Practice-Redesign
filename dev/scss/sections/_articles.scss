@@ -14,31 +14,78 @@
 
     }
 
-    >div {
-       
-
-       @include md{
-        grid-area: artciles;
-        display: grid;
-        grid-template-columns: 50% auto;
-       }
-
-        section {
-
-            img {
-                width: 100%;
-            }
-        }
-
-        .card {
+        >div {
             display: grid;
-            grid-template-columns: 16px auto 16px;
-            grid-template-areas: ". card .";
-            background-color: rgb(9, 160, 160);
-
-            >div {
-                grid-area: card;
+            gap: 16px;
+    
+            @include md {
+                grid-area: articles;
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-areas:
+                    " n1 n1 n2 n2"
+                    "n3 n3 n4 n4"
+                    "..n5 n5 ..";
+    
+            }
+    
+            @include lg {
+                grid-area: articles;
+                grid-template-columns: repeat(6, 1fr);
+                grid-template-areas:
+                    " n1 n1 n2 n2 n3 n3 "
+                    ".. n4 n4 n5 n5 ..";
+            }
+    
+    
+            section {
+    
+                img {
+                    width: 100%;
+                }
+            }
+    
+            .card {
+                display: grid;
+                grid-template-columns: 16px auto 16px;
+                grid-template-areas: ". card .";
+                background-color: rgb(9, 160, 160);
+    
+                >div {
+                    grid-area: card;
+                }
+            }
+    
+        }
+    
+        #n1 {
+            @include md {
+                grid-area: n1;
             }
         }
-    }
-}
+    
+    
+        #n2 {
+            @include md {
+                grid-area: n2;
+            }
+        }
+    
+        #n3 {
+            @include md {
+                grid-area: n3;
+            }
+        }
+    
+        #n4 {
+            @include md {
+                grid-area: n4;
+            }
+        }
+    
+        #n5 {
+            @include md {
+                grid-area: n5;
+            }
+        }
+    
+        }
