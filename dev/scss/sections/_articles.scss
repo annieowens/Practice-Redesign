@@ -32,7 +32,7 @@
                             grid-area: articles;
                             grid-template-columns: repeat(6, 1fr);
                             grid-template-areas:
-                                "nt nt nt nt"
+                                "nt nt nt nt nt nt"
                                 " n1 n1 n2 n2 n3 n3 "
                                 ".. n4 n4 n5 n5 ..";
                         }
@@ -42,6 +42,7 @@
                             grid-area: nt;
                         }
                     }
+                    
             section {
     
                 img {
