@@ -19,24 +19,29 @@
             gap: 16px;
     
             @include md {
-                grid-area: articles;
-                grid-template-columns: repeat(4, 1fr);
-                grid-template-areas:
-                    " n1 n1 n2 n2"
-                    "n3 n3 n4 n4"
-                    "..n5 n5 ..";
+                    grid-area: articles;
+                    grid-template-columns: repeat(4, 1fr);
+                    grid-template-areas:
+                        "nt nt nt nt"
+                        " n1 n1 n2 n2"
+                        "n3 n3 n4 n4"
+                        "..n5 n5 ..";
+                }
     
-            }
+                        @include lg {
+                            grid-area: articles;
+                            grid-template-columns: repeat(6, 1fr);
+                            grid-template-areas:
+                                "nt nt nt nt"
+                                " n1 n1 n2 n2 n3 n3 "
+                                ".. n4 n4 n5 n5 ..";
+                        }
     
-            @include lg {
-                grid-area: articles;
-                grid-template-columns: repeat(6, 1fr);
-                grid-template-areas:
-                    " n1 n1 n2 n2 n3 n3 "
-                    ".. n4 n4 n5 n5 ..";
-            }
-    
-    
+                    h1{
+                        @include md{
+                            grid-area: nt;
+                        }
+                    }
             section {
     
                 img {
