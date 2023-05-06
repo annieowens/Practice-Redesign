@@ -430,6 +430,12 @@ header #searchbar > div {
     grid-template-areas: "f1 f2" "f1 f3";
   }
 }
+@media (min-width: 1024px) {
+  #footer > div {
+    grid-template-columns: repeat(3, 1r);
+    grid-template-areas: "f1 f2 f3";
+  }
+}
 @media (min-width: 768px) {
   #footer > div #f1 {
     grid-area: f1;
@@ -480,7 +486,7 @@ header #searchbar > div {
 }
 @media (min-width: 1440px) {
   #recipe #recipe-bottom {
-    grid-template-columns: 20% auto 16px;
+    grid-template-columns: 60% auto 16px;
   }
 }
 #recipe #recipe-bottom #recipe-bottom-right {
@@ -488,7 +494,7 @@ header #searchbar > div {
 }
 @media (min-width: 1440px) {
   #recipe #recipe-bottom {
-    grid-template-columns: 16px auto 20%;
+    grid-template-columns: 40% auto 16px;
   }
 }
 

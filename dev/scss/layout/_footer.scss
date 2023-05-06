@@ -22,6 +22,12 @@
             "f1 f2"
             "f1 f3";
         }
+
+        @include lg{
+            grid-template-columns: repeat(3, 1r) ;
+            grid-template-areas: 
+            "f1 f2 f3";
+        }
         #f1{
             @include md{
                 grid-area: f1;
@@ -37,6 +43,7 @@
                 grid-area: f3;
             }
         }
+        
     }
 
 }
