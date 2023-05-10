@@ -16,15 +16,15 @@ ul {
     }
 }
 .content-spacing{
-    padding-top: 32px;
+    padding-top: 16px;
     @include lg{
-        padding-top: 64px;
+        padding-top: 32px;
     }
  }
  .tent-spacing{
     padding-bottom: 32px;
     @include lg{
-        padding-bottom: 64px;
+        padding-bottom: 32px;
     }
  }
  
