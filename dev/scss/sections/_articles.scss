@@ -2,6 +2,7 @@
     articles
 ============= */
 #articles {
+    
 
     @include md {
         display: grid;
@@ -17,6 +18,7 @@
         >div {
             display: grid;
             gap: 16px;
+            
     
             @include md {
                     grid-area: articles;
@@ -54,8 +56,8 @@
                 display: grid;
                 grid-template-columns: 16px auto 16px;
                 grid-template-areas: ". card .";
-                background-color: rgb(9, 160, 160);
-    
+                background-color: rgb(159, 182, 174);
+                border-color: var(--sage);
                 >div {
                     grid-area: card;
                 }
@@ -92,6 +94,9 @@
             @include md {
                 grid-area: n5;
             }
+        }
+        h1{
+            margin-bottom: 16px;
         }
     
         }

@@ -1,28 +1,58 @@
 /* =============
     Header
 ============= */
-header{
-   #nav{
-    background-color: rgb(51, 149, 201);
-    display: grid;
-    grid-template-columns: 16px auto 16px;
-    grid-template-areas: ". header .";
-    >div{
-        grid-area: header ;
-   }
+header {
+    #nav {
+        background-color: #78c112;
+        display: grid;
+        grid-template-columns: 16px auto 16px;
+        grid-template-areas: ". header .";
 
-    
-   }
-   
-#searchbar{
-    display: grid;
-    grid-template-columns: 16px auto 16px;
-    grid-template-areas: ". searchbar .";
-    background-color: rgb(18, 101, 101);
+        nav {
+            margin-left: auto;
+            display: flex;
+        }
 
-    >div{
-        grid-area: searchbar ;
+        h1 {
+            margin-bottom: 16px;
+        }
+
+        >div {
+            grid-area: header;
+        }
+
+
+    }
+
+    #searchbar {
+        display: grid;
+        grid-template-columns: 16px auto 16px;
+        grid-template-areas: ". searchbar .";
+
+        svg {
+            background-color: #4bad12;
+        }
+
+
+        >div {
+            grid-area: searchbar;
+        }
+
+        input {
+            background-color: rgb(183, 228, 17);
+            border-bottom: 1px solid rgb(19, 18, 18);
+            color: black;
+            padding: 16px 32px;
+        }
+
+        button {
+            background-color: rgb(134, 188, 157);
+            color: black;
+            border: none;
+            padding: 16px 24px;
+            margin-left: auto;
+            margin-top: 16px;
+        }
+
     }
 }
-    
-    }
