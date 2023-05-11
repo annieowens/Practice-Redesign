@@ -418,46 +418,42 @@ textarea {
 /* =============
     Header
 ============= */
-header #nav {
-  background-color: #5E6D49;
-  display: grid;
-  grid-template-columns: 16px auto 16px;
-  grid-template-areas: ". header .";
+header nav {
+  background-color: red;
 }
-header #nav nav {
-  margin-left: auto;
+header nav > div {
   display: flex;
 }
-header #nav h1 {
+header h1 {
   margin-bottom: 16px;
 }
-header #nav > div {
+header > div {
   grid-area: nav;
 }
-header #nav #searchbar {
+header #searchbar {
   display: grid;
   grid-template-columns: 16px auto 16px;
   grid-template-areas: ". searchbar .";
   padding: 16px 0;
 }
 @media (min-width: 768px) {
-  header #nav #searchbar {
+  header #searchbar {
     padding: 24px;
   }
 }
-header #nav #searchbar > div {
+header #searchbar > div {
   grid-area: searchbar;
 }
-header #nav #searchbar > div form {
+header #searchbar > div form {
   display: flex;
 }
-header #nav #searchbar > div form input {
+header #searchbar > div form input {
   border: none;
   border-bottom: 1px solid black;
   width: 100%;
   border-radius: 0;
 }
-header #nav #searchbar > div button {
+header #searchbar > div button {
   border: none;
   background-color: #f1f5ed;
   border-radius: 5px;

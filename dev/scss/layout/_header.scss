@@ -2,15 +2,15 @@
     Header
 ============= */
 header {
-    #nav {
-        background-color: #5E6D49;
-        display: grid;
-        grid-template-columns: 16px auto 16px;
-        grid-template-areas: ". header .";
 
         nav {
-            margin-left: auto;
-            display: flex;
+            background-color: red;
+            // margin-left: auto;
+            // display: flex;
+
+            >div{
+                display: flex;
+            }
         }
 
         h1 {
@@ -53,5 +53,5 @@ header {
             }
         }
 
-    }
+    
 }
