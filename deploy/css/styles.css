@@ -545,19 +545,19 @@ header #nav #searchbar > div button {
     grid-template-columns: 50% auto;
   }
 }
-#recipe #recipe-bottom section {
+#recipe #recipe-bottom .recipe-content {
   display: grid;
   grid-template-areas: ". recipe .";
   background-color: rgb(151, 163, 22);
 }
-#recipe #recipe-bottom section > div {
+#recipe #recipe-bottom .recipe-content > div {
   grid-area: recipe;
 }
 #recipe #recipe-bottom #recipe-bottom-left {
   background-color: #d4c5a7;
 }
 @media (min-width: 1440px) {
-  #recipe #recipe-bottom {
+  #recipe #recipe-bottom #recipe-bottom-left {
     grid-template-columns: 50% auto 16px;
   }
 }
@@ -565,7 +565,7 @@ header #nav #searchbar > div button {
   background-color: #D5CCBA;
 }
 @media (min-width: 1440px) {
-  #recipe #recipe-bottom {
+  #recipe #recipe-bottom #recipe-bottom-right {
     grid-template-columns: 50% auto 16px;
   }
 }
