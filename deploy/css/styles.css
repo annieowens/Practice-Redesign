@@ -353,7 +353,7 @@ ul li {
 }
 
 .tent-spacing {
-  padding-bottom: 32px;
+  padding-bottom: 16px;
 }
 @media (min-width: 1024px) {
   .tent-spacing {
@@ -432,35 +432,36 @@ header #nav h1 {
   margin-bottom: 16px;
 }
 header #nav > div {
-  grid-area: header;
+  grid-area: nav;
 }
-header #searchbar {
+header #nav #searchbar {
   display: grid;
   grid-template-columns: 16px auto 16px;
   grid-template-areas: ". searchbar .";
+  padding: 16px 0;
 }
-header #searchbar svg {
-  background-color: #4bad12;
+@media (min-width: 768px) {
+  header #nav #searchbar {
+    padding: 24px;
+  }
 }
-header #searchbar > div {
+header #nav #searchbar > div {
   grid-area: searchbar;
-  grid-area: search-bar;
 }
-header #searchbar input {
-  background-color: rgb(183, 228, 17);
-  border-bottom: 1px solid rgb(19, 18, 18);
-  color: black;
-  border: none;
-  border-bottom: 1px solid var(#060606);
-  padding: 16px 32px;
+header #nav #searchbar > div form {
+  display: flex;
 }
-header #searchbar button {
-  background-color: rgb(134, 188, 157);
-  color: black;
+header #nav #searchbar > div form input {
   border: none;
-  padding: 16px 24px;
-  margin-left: auto;
-  margin-top: 16px;
+  border-bottom: 1px solid black;
+  width: 100%;
+  border-radius: 0;
+}
+header #nav #searchbar > div button {
+  border: none;
+  background-color: #f1f5ed;
+  border-radius: 5px;
+  padding: 10px 16px;
 }
 
 /* =============
@@ -536,7 +537,7 @@ header #searchbar button {
 @media (min-width: 768px) {
   #recipe #recipe-bottom {
     display: grid;
-    grid-template-columns: 40% auto;
+    grid-template-columns: 50% auto;
   }
 }
 @media (min-width: 1024px) {
@@ -557,7 +558,7 @@ header #searchbar button {
 }
 @media (min-width: 1440px) {
   #recipe #recipe-bottom {
-    grid-template-columns: 60% auto 16px;
+    grid-template-columns: 50% auto 16px;
   }
 }
 #recipe #recipe-bottom #recipe-bottom-right {
@@ -565,7 +566,7 @@ header #searchbar button {
 }
 @media (min-width: 1440px) {
   #recipe #recipe-bottom {
-    grid-template-columns: 40% auto 16px;
+    grid-template-columns: 50% auto 16px;
   }
 }
 

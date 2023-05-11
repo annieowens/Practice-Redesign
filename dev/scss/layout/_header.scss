@@ -18,44 +18,39 @@ header {
         }
 
         >div {
-            grid-area: header;
+            grid-area: nav;
         }
 
+        #searchbar{
+            display: grid;
+            grid-template-columns: 16px auto 16px;
+            grid-template-areas: ". searchbar .";
+            padding: 16px 0;
 
-    }
-
-    #searchbar {
-        display: grid;
-        grid-template-columns: 16px auto 16px;
-        grid-template-areas: ". searchbar .";
-       
-
-        svg {
-            background-color: #4bad12;
-        }
-
-
-        >div {
-            grid-area: searchbar;
-            grid-area: search-bar;
-        }
-
-        input {
-            background-color: rgb(183, 228, 17);
-            border-bottom: 1px solid rgb(19, 18, 18);
-            color: black;
-            border: none;
-            border-bottom: 1px solid var(#060606);
-            padding: 16px 32px;
-        }
-
-        button {
-            background-color: rgb(134, 188, 157);
-            color: black;
-            border: none;
-            padding: 16px 24px;
-            margin-left: auto;
-            margin-top: 16px;
+            @include md{
+                padding: 24px;
+            }
+            >div{
+                grid-area: searchbar;
+    
+                form{
+                    display: flex;
+    
+                    input{
+                        border: none;
+                        border-bottom: 1px solid black;
+                        width: 100%;
+                        border-radius: 0;
+                    }
+                }
+    
+                button{
+                    border: none;
+                    background-color: #f1f5ed;
+                    border-radius: 5px;
+                    padding: 10px 16px;
+                }
+            }
         }
 
     }
