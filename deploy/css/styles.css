@@ -415,6 +415,9 @@ textarea {
 /* =============
     Navigation
 ============= */
+nav ul li a:link, nav ul li a:visited {
+  padding: 24px 36px;
+}
 /* =============
     Header
 ============= */
