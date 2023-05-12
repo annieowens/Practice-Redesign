@@ -508,6 +508,21 @@ header #searchbar > div button {
     grid-area: f2;
   }
 }
+#footer > div #f2 form input {
+  border-color: var(black);
+  width: 100%;
+  border-radius: 0;
+  border: none;
+  box-sizing: border-box;
+  padding: 16px 8px;
+}
+#footer > div #f2 form div {
+  text-align: right;
+}
+#footer > div #f2 form div button {
+  margin-top: 16px;
+  border: none;
+}
 @media (min-width: 768px) {
   #footer > div #f3 {
     grid-area: f3;

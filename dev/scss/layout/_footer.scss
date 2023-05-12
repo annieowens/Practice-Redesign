@@ -47,6 +47,25 @@
             @include md{
                 grid-area: f2;
             }
+
+            form{
+                input{
+                    border-color: var(black);
+                    width: 100%;
+                    border-radius: 0;
+                    border: none;
+                    box-sizing: border-box;
+                    padding: 16px 8px ;
+                }
+
+                div{
+                    text-align: right;
+                    button{
+                        margin-top: 16px;
+                        border: none;
+                    }
+                }
+            }
         }
         #f3{
             @include md{
