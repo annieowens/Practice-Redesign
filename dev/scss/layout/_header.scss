@@ -50,6 +50,21 @@ header {
                     border-radius: 5px;
                     padding: 10px 16px;
                 }
+
+                #header-info{
+                    @include md{
+                        display: flex;
+                        align-items: left;
+                        padding: 136px;
+                    }
+
+                    h1{
+                        margin-bottom: 16px;
+                        
+                    }
+                    
+
+                }
             }
         }
 
