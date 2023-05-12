@@ -386,6 +386,10 @@ ul li {
 /* =============
     Typography
 ============= */
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 h1, h2, h3, h4, p {
   margin: 0;
   padding: 0;
@@ -558,6 +562,25 @@ header #searchbar > div button {
 /* =============
     Hero
 ============= */
+#hero {
+  background-image: url("img/heroes/hero1.png");
+  background-size: cover;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+}
+@media (min-width: 768px) {
+  #hero {
+    height: 60vh;
+    background-position: top;
+  }
+}
+@media (min-width: 1200px) {
+  #hero {
+    height: 70vh;
+  }
+}
+
 .large-images {
   background-color: darkgray;
 }
