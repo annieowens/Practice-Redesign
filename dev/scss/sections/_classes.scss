@@ -32,10 +32,25 @@
            
     
             >div {
+                img{
+                    padding: 10px 16px;
+                }
     
                 grid-area: classes;
                 display: grid;
                 grid-template-columns: 70% auto;
+                padding: 10px 16px;
+
+
+                button{
+                    border: 1px solid black;
+                    background-color: #8ea481;
+                    border-radius: 5px;
+                    padding: 10px 16px;
+                    margin-top: 16px;
+                    margin-left: 0;
+                    margin-bottom: 12px;
+                }
     
             }
         }

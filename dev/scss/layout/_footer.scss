@@ -32,6 +32,16 @@
             @include md{
                 grid-area: f1;
             }
+
+            section{
+                display: flex;
+
+                img{
+                    color: var(--white);
+                    font-size: rem-calc(20);
+                    margin-right: 16px;
+                }
+            }
         }
         #f2{
             @include md{
